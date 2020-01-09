@@ -2,11 +2,11 @@ package com.xj.queue;
 
 public class ArrayQueueDemo {
     public static void main(String[] args) {
-        ArrayQueue arrayQueue = new ArrayQueue(3);
-        arrayQueue.addQueue(1);
-        arrayQueue.addQueue(2);
-        arrayQueue.addQueue(3);
-        arrayQueue.addQueue(4);
+        ArrayQueue queue = new ArrayQueue(3);
+        queue.addQueue(1);
+        queue.addQueue(3);
+        queue.addQueue(5);
+        queue.showQueue();
     }
 }
 class ArrayQueue{
@@ -52,5 +52,11 @@ class ArrayQueue{
             throw new RuntimeException("队空队空，无法取出数据");
         }
         return arr[front + 1];
+    }
+    //显示队列数据
+    public void showQueue(){
+        while (!isEmpty()){
+            System.out.println(getQueue());
+        }
     }
 }
