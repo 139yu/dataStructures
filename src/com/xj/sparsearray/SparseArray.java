@@ -1,9 +1,12 @@
 package com.xj.sparsearray;
+
+import java.io.*;
+
 /*
 * 稀疏数组
 * */
 public class SparseArray {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         int chessArr1[][] = new int[11][11];
         chessArr1[1][1] = 1;
         chessArr1[2][3] = 2;
@@ -37,7 +40,18 @@ public class SparseArray {
                 }
             }
         }
-        //输出稀疏数组
+        String sparseStr[] = new String[sparseArr.length];
+        for (int i=0;i<sparseArr.length;i++){
+            sparseStr[i] = sparseArr[i][0] + " " + sparseArr[i][1] + " " + sparseArr[i][2];
+        }
+        File file = new File("sparse.data");
+        BufferedWriter bw = new BufferedWriter(new FileWriter(file));
+        for (String s : sparseStr) {
+            bw.write(s,0,s.length());
+            bw.newLine();
+        }
+        bw.close();
+        /*//输出稀疏数组
         System.out.println("稀疏数组：");
         for (int i=0;i<sparseArr.length;i++){
             for (int j=0;j<sparseArr[0].length;j++){
@@ -60,6 +74,6 @@ public class SparseArray {
                 }
             }
             System.out.println();
-        }
+        }*/
     }
 }
