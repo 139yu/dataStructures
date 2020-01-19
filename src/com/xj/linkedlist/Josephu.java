@@ -4,7 +4,9 @@ package com.xj.linkedlist;
 * */
 public class Josephu {
     public static void main(String[] args) {
-        Boy boy1 = new Boy(1);
+        char ch = '-';
+        System.out.println(45==ch);
+        /*Boy boy1 = new Boy(1);
         Boy boy2 = new Boy(2);
         Boy boy3 = new Boy(3);
         Boy boy4 = new Boy(4);
@@ -15,7 +17,7 @@ public class Josephu {
         linkedList.add(boy3);
         linkedList.add(boy4);
         linkedList.add(boy5);
-        linkedList.countBoy(2,2);
+        linkedList.countBoy(2,2);*/
     }
 }
 class CircleSingleLinkedList{
